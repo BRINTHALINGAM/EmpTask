@@ -1,0 +1,24 @@
+
+.highlight {
+    background-color: #ffcccc;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  ngx-charts-pie-chart {
+    margin-top: 0; /* Remove space above the pie chart */
+  }
+  

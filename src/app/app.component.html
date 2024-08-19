@@ -1,0 +1,31 @@
+<div>
+  <h2>Employee Details</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Total Time in Month (hours)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees" [class.highlight]="employee.totalTimeWorked < 100">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.totalTimeWorked }}</td>
+        <td>
+          <button (click)="editEmployee(employee)">Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ngx-charts-pie-chart
+  [results]="pieChartData"
+  [scheme]="colorScheme"
+  [labels]="true"
+  [doughnut]="true">
+  [legend]="true" <!-- Enable legend -->
+  [legendPosition]="'below'" <!-- Position legend below the chart -->
+  [showLabels]="true">
+</ngx-charts-pie-chart>
